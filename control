@@ -1,7 +1,7 @@
 Source: swi-prolog
 Section: interpreters
 Priority: optional
-Maintainer: Євгеній Мещеряков <eugen@debian.org>
+Maintainer: Jan Wielemaker <jan@swi-prolog.org>
 Build-Depends:
  debhelper (>= 9~),
  libncursesw5-dev,
