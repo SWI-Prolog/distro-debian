@@ -23,7 +23,7 @@ Build-Depends:
  libarchive-dev,
  libssl-dev,
  zlib1g-dev,
- libunwind8-dev [ia64 i386 amd64 ppc64 powerpc armel armhf],
+ libunwind8-dev | libunwind7-dev [ia64 i386 amd64 ppc64 powerpc armel armhf],
  libossp-uuid-dev,
  dh-autoreconf
 Standards-Version: 3.9.4
