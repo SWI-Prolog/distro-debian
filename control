@@ -3,7 +3,7 @@ Section: interpreters
 Priority: optional
 Maintainer: Jan Wielemaker <jan@swi-prolog.org>
 Build-Depends:
- debhelper (>= 9~),
+ debhelper,
  libncursesw5-dev,
  libreadline-dev,
  libgmp-dev,
@@ -25,7 +25,7 @@ Build-Depends:
  zlib1g-dev,
  libunwind8-dev [ia64 i386 amd64 ppc64 powerpc armel armhf],
  libossp-uuid-dev,
- dh-autoreconf (>= 6~)
+ dh-autoreconf
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/swi-prolog.git
