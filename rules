@@ -62,7 +62,7 @@ override_dh_auto_configure:
 	dh_auto_configure -- $(CONFFLAGS) PL="swipl" PLARCH=$(DEB_BUILD_ARCH) PLBASE=$(PLBASE)
 
 override_dh_auto_build:
-	$(MAKE) < /dev/null 
+	$(MAKE) < /dev/null
 
 override_dh_auto_clean:
 	[ ! -f Makefile ] || $(MAKE) clean
@@ -101,6 +101,11 @@ override_dh_install:
 
 override_dh_builddeb:
 	dh_builddeb -- -Zxz
+
+# tell the tests NOT to try to access http://www.swi-prolog.org.  This
+# is used in some of the HTTP tests
+USE_PUBLIC_NETWORK_TESTS=false
+export USE_PUBLIC_NETWORK_TESTS
 
 override_dh_auto_test:
 	# TODO enable other tests
