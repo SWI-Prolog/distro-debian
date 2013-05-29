@@ -33,9 +33,14 @@ X_PACKAGES = xpce
 ODBC_PACKAGES = odbc
 
 # Add here all packages that are not installed into deb packages
-# FIXME what is happening with tipc???
 DISABLE_PKGS += tipc windows
 export DISABLE_PKGS
+
+ifeq ($(shell dpkg-architecture -qDEB_BUILD_ARCH_OS),linux)
+    NOX_PACKAGES += tipc
+else
+    DISABLE_PKGS += tipc
+endif
 
 # install_package prolog_pkg deb_pkg
 define install_package
