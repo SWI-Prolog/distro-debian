@@ -1,3 +1,9 @@
+swi-prolog (6.3.16-5-ga7018e1-raringppa2) raring; urgency=low
+
+  * New upstream release (from GIT)
+
+ -- Jan Wielemaker <jan@swi-prolog.org>  Sun, 09 Jun 2013 16:36:41 +0200
+
 swi-prolog (6.2.6-1) experimental; urgency=low
 
   * New upstream release 
