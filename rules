@@ -33,7 +33,7 @@ X_PACKAGES = xpce
 ODBC_PACKAGES = odbc
 
 # Add here all packages that are not installed into deb packages
-DISABLE_PKGS += tipc windows
+DISABLE_PKGS += windows
 export DISABLE_PKGS
 
 ifeq ($(shell dpkg-architecture -qDEB_BUILD_ARCH_OS),linux)
