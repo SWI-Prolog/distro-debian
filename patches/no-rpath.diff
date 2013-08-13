@@ -4,8 +4,8 @@
  SO_PIC="-fPIC"
  SO_LD="$CC"
  SO_EXT="so"
--SO_PATH="-Wl,-rpath=$PLBASE/lib/$PLARCH$RPATH_EXTRA"
-+SO_PATH=""
+-SO_RPATH="-Wl,-rpath=$PLBASE/lib/$PLARCH$RPATH_EXTRA"
++SO_RPATH=""
  DLLIBVAR=LD_LIBRARY_PATH
  MINGW="false"
- 
+
