@@ -127,6 +127,7 @@ override_dh_auto_test:
 	$(MAKE) -C $(CURDIR)/packages/nlp check
 	$(MAKE) -C $(CURDIR)/packages/zlib check
 	$(MAKE) -C $(CURDIR)/packages/protobufs check
+	$(MAKE) -C $(CURDIR)/packages/pengines check
 ifneq ($(JAVA_PACKAGES),)
 	$(MAKE) -C $(CURDIR)/packages/jpl check
 endif
