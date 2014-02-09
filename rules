@@ -28,7 +28,7 @@ endif
 PLBASE := /usr/lib/swi-prolog/
 JNIDIR := /usr/lib/$(DEB_BUILD_MULTIARCH)/jni
 
-NOX_PACKAGES = clib cpp table sgml RDF semweb http chr clpqr nlp ssl pldoc plunit zlib R protobufs PDT utf8proc archive
+NOX_PACKAGES = clib cpp table sgml RDF semweb http chr clpqr nlp ssl pldoc plunit zlib R protobufs PDT utf8proc archive pengines
 X_PACKAGES = xpce
 ODBC_PACKAGES = odbc
 
@@ -127,6 +127,7 @@ override_dh_auto_test:
 	$(MAKE) -C $(CURDIR)/packages/nlp check
 	$(MAKE) -C $(CURDIR)/packages/zlib check
 	$(MAKE) -C $(CURDIR)/packages/protobufs check
+	$(MAKE) -C $(CURDIR)/packages/pengines check
 ifneq ($(JAVA_PACKAGES),)
 	$(MAKE) -C $(CURDIR)/packages/jpl check
 endif
