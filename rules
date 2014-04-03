@@ -95,7 +95,7 @@ override_dh_auto_install:
 	# Remove empty directories
 	find debian/ -depth -type d -empty -exec rm -rfv {} \;
 
-	mv $(CURDIR)/debian/swi-prolog-nox/$(PLBASE)/lib/$(DEB_BUILD_ARCH)/libswipl.so* $(CURDIR)/debian/swi-prolog-nox/usr/lib/
+	mv $(CURDIR)/debian/swi-prolog-nox/$(PLBASE)/lib/$(DEB_BUILD_ARCH)/libswipl.* $(CURDIR)/debian/swi-prolog-nox/usr/lib/
 
 	# Link libjpl.so from the JNI directory so java can load it without LD_LIBRARY_PATH
 	mkdir -p $(CURDIR)/debian/swi-prolog-java/$(JNIDIR)
