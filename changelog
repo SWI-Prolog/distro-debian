@@ -1,3 +1,9 @@
+swi-prolog (6.6.5-1-gdfec810-preciseppa2) precise; urgency=medium
+
+  * New upstream release (from GIT)
+
+ -- Jan Wielemaker <jan@swi-prolog.org>  Sat, 26 Apr 2014 11:37:24 +0200
+
 swi-prolog (6.4.1-1-g09194b7-raringppa2) raring; urgency=low
 
   * New upstream release (from GIT)
