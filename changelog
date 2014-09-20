@@ -1,3 +1,9 @@
+swi-prolog (7.1.23-0-trustyppa2) trusty; urgency=medium
+
+  * New upstream release (from GIT)
+
+ -- Jan Wielemaker <jan@swi-prolog.org>  Sat, 20 Sep 2014 22:50:01 +0200
+
 swi-prolog (7.1.11-5-g9c58b7c-saucyppa2) saucy; urgency=low
 
   * New upstream release (from GIT)
