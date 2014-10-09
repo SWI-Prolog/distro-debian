@@ -28,7 +28,7 @@ endif
 PLBASE := /usr/lib/swi-prolog/
 JNIDIR := /usr/lib/$(DEB_BUILD_MULTIARCH)/jni
 
-NOX_PACKAGES = clib cpp table sgml RDF semweb http chr clpqr nlp ssl pldoc plunit zlib R protobufs PDT utf8proc archive pengines
+NOX_PACKAGES = clib cpp table sgml RDF semweb http chr clpqr nlp ssl pldoc plunit zlib R protobufs PDT utf8proc archive pengines cql
 X_PACKAGES = xpce
 ODBC_PACKAGES = odbc
 
