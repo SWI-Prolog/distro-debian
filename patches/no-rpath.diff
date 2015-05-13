@@ -1,8 +1,6 @@
-diff --git a/src/configure.in b/src/configure.in
-index 2061761..df8ae3c 100644
 --- a/src/configure.in
 +++ b/src/configure.in
-@@ -578,7 +578,7 @@ SO_pic="-fpic"
+@@ -578,7 +578,7 @@
  SO_PIC="-fPIC"
  SO_LD="$CC"
  SO_EXT="so"
