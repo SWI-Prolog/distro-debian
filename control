@@ -25,6 +25,7 @@ Build-Depends:
  zlib1g-dev,
  libunwind8-dev | libunwind7-dev [ia64 i386 amd64 ppc64 powerpc armel armhf],
  libossp-uuid-dev,
+ libdb-dev
  dh-autoreconf
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
@@ -135,3 +136,24 @@ Description: ODBC library for SWI-Prolog
  .
  This package provides a foreign language extension to ODBC, a standard for
  interfacing with database systems.
+
+Package: swi-prolog-bdb
+Architecture: any
+Depends: ${shlibs:Depends}, swi-prolog-nox (= ${binary:Version}), ${misc:Depends}
+Description: Berkeley DB interface for SWI-Prolog
+ SWI-Prolog is a fast and powerful ISO/Edinburgh-style Prolog compiler with a
+ rich set of built-in predicates. It offers a fast, robust and small
+ environment which enables substantial applications to be developed with it.
+ .
+ SWI-Prolog additionally offers:
+ .
+  * A powerful module system
+  * Garbage collection
+  * Unicode character set handling
+  * Unbounted integer and rational number arithmetic
+  * Multithreading support
+  * A powerful C/C++ interface
+  * GNU Readline interface
+ .
+ This package provides a foreign language extension to the Berkeley DB
+ (libdb) embedded database.
