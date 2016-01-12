@@ -91,9 +91,6 @@ override_dh_auto_install:
 	# Generate xpce's autoload index
 	echo "make_library_index('$(CURDIR)/debian/swi-prolog-x/$(PLBASE)/xpce/prolog/lib/')." | $(CURDIR)/src/swipl.sh
 
-	# Remove superfluous copies of the GPL
-	rm debian/swi-prolog-x/$(PLBASE)/xpce/COPYING
-
 	# Remove empty directories
 	find debian/ -depth -type d -empty -exec rm -rfv {} \;
 
