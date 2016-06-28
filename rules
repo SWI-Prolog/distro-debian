@@ -50,7 +50,7 @@ define install_package
 		DESTDIR=$(CURDIR)/debian/$(2) \
 		PL=$(CURDIR)/src/swipl.sh \
 		PLEXE=$(CURDIR)/src/swipl.sh \
-		PLBASE=$(PLBASE) install < /dev/null
+		PLBASE=$(PLBASE) install html-install < /dev/null
 
 endef
 
