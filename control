@@ -6,6 +6,7 @@ Build-Depends:
  debhelper,
  libncursesw5-dev,
  libreadline-dev,
+ libedit-dev,
  libgmp-dev,
  libjpeg8-dev,
  libx11-dev,
@@ -53,7 +54,7 @@ Description: ISO/Edinburgh-style Prolog interpreter
 
 Package: swi-prolog-nox
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libgmp-dev, libreadline-dev, libncursesw5-dev
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgmp-dev, libedit-dev, libreadline-dev, libncursesw5-dev
 Breaks: swi-prolog (<< 5.8.2-1)
 Suggests: swi-prolog-doc, prolog-el
 Description: ISO/Edinburgh-style Prolog interpreter (without X support)
