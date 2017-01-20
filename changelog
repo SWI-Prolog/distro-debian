@@ -54,7 +54,7 @@ swi-prolog (6.3.18-0-preciseppa2) precise; urgency=low
 
 swi-prolog (6.2.6-1) experimental; urgency=low
 
-  * New upstream release 
+  * New upstream release
 
  -- Євгеній Мещеряков <eugen@debian.org>  Fri, 10 May 2013 22:36:57 +0200
 
@@ -75,7 +75,7 @@ swi-prolog (6.2.5-5) experimental; urgency=low
   * New patch:
     - pthread-flag-detection.diff - do not check for -D_REENTRANT when
       checking for -pthread flag support. This does not work on Hurd.
-      See also #697133. 
+      See also #697133.
   * Remove patches not in debian/patches/series:
     - 04_fix_hyphens_being_used_as_minus_signs_in_manpages.diff
     - segstack-alignment.diff
@@ -101,7 +101,7 @@ swi-prolog (6.2.5-2) experimental; urgency=low
 
   * Link libjpl.so from the JNI directory, so Java runtime can find it
     without need to modify LD_LIBRARY_PATH
-  * Enable checks for jpl package 
+  * Enable checks for jpl package
   * New patch:
     - java-test-library-path.diff - set LD_LIBRARY_PATH during jpl check
   * Add README.Debian to swi-prolog-java package that describes
@@ -120,12 +120,12 @@ swi-prolog (6.2.3-1) experimental; urgency=low
   * New upstream release
   * Remove patches (applied upstream):
     - upstream-6.2.3-pre.diff
-    - distclean-fixes.diff 
+    - distclean-fixes.diff
     - implicit-declarations.diff
     - VEOL2-check.diff
   * Updated patches:
     - default-stack-size.diff
-    - no-rpath.diff 
+    - no-rpath.diff
 
  -- Євгеній Мещеряков <eugen@debian.org>  Sun, 25 Nov 2012 16:05:35 +0100
 
@@ -134,7 +134,7 @@ swi-prolog (6.2.2-17) experimental; urgency=low
   * New patch:
     - no-rpath.diff - do not set rpath during compilation
   * Use dh-autoreconf during the package build
-  * Pass --enable-shared to configure again 
+  * Pass --enable-shared to configure again
 
  -- Євгеній Мещеряков <eugen@debian.org>  Sun, 04 Nov 2012 18:10:07 +0100
 
@@ -262,13 +262,13 @@ swi-prolog (6.2.2-6) experimental; urgency=low
 swi-prolog (6.2.2-5) experimental; urgency=low
 
   * Install plunit in swi-prolog-nox
-  * Install pldoc in swi-prolog-nox (closes: #643641) 
+  * Install pldoc in swi-prolog-nox (closes: #643641)
   * Add symlink /usr/lib/swi-prolog/prolog.rc pointing to
     /usr/lib/swi-prolog/swipl.rc and /usr/lib/swi-prolog/xpce.rc
     pointing to /usr/lib/swi-prolog/xpce/pl/xpce.rc. This should fix
-    running the prolog executable with different names (closes: #640242) 
+    running the prolog executable with different names (closes: #640242)
   * Do not use chrpath during build and do not build-depend on it, this is
-    not required anymore 
+    not required anymore
   * Use dh_lintian to install lintian overrides
   * Replace segstack-alignment.diff with patch from upstream
   * Re-add xpce manpages to swi-prolog-x
@@ -537,7 +537,7 @@ swi-prolog (5.6.59-1) unstable; urgency=low
       + Fix possible crash of profiler on GC.
       + Misc. GC fixes
     - HTTP fixes:
-      + http_read_request/3 throws error on illegal request and 
+      + http_read_request/3 throws error on illegal request and
         http_wrapper/5.
       + http_open/3 now raises an error if the URL is not well-formed
         instead of failing silently.
