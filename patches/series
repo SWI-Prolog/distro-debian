@@ -1,5 +1,3 @@
-maildrop-fpic.diff
-ignore-format-string-error.diff
 pkg-config.diff
 default-stack-size.diff
 no-rpath.diff
