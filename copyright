@@ -5,13 +5,15 @@ It was downloaded from <http://www.swi-prolog.org/>.
 
 Copyright:
 
-    Copyright (C) 1985-2011 University of Amsterdam
-                            Vu University Amsterdam
+    Copyright (C) 1985-2017 University of Amsterdam
+                            VU University Amsterdam
 
-    SWI-Prolog/XPCE and all our packages are now licensed according to the
-    LGPL for the C-parts and GPL + exception to allow linking into non-GPL
-    applications for the Prolog libraries.
+    SWI-Prolog is covered by the Simplified BSD (BSD-2) license
 
-On Debian systems, you can find the GNU General Public License in the file
-/usr/share/common-licenses/GPL-2 and the GNU Lesser General Public License in
-the file /usr/share/common-licenses/LGPL-2.
+Note that SWI-Prolog may  be  linked   with  libraries  covered  by more
+restrictive license and therefore the above   conditions may not suffice
+for a particular  version  of  SWI-Prolog   or  a  program  loaded  into
+SWI-Prolog. Run the following predicate to   find  which components with
+additional requirements are loaded into a particular version.
+
+    ?- license.
