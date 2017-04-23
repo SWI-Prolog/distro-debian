@@ -27,6 +27,7 @@ Build-Depends:
  libunwind8-dev | libunwind7-dev [ia64 i386 amd64 ppc64 powerpc armel armhf],
  libossp-uuid-dev,
  libdb-dev,
+ libpcre3-dev,
  dh-autoreconf
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
