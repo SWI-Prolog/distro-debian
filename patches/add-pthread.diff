@@ -5,8 +5,8 @@ This is an attempt to fix build failure on Hurd. This is the only architecture i
 Debian that should be affected by the change.
 
 See also bug #697133.
---- a/src/configure.in
-+++ b/src/configure.in
+--- a/src/configure.ac
++++ b/src/configure.ac
 @@ -778,7 +778,8 @@
    AC_CHECK_LIB(pthread, main)
      if test "$ac_cv_lib_pthread_main" = "yes"; then
@@ -16,4 +16,4 @@ See also bug #697133.
 +      LDFLAGS="$LDFLAGS -pthread"
      fi
    fi
- 
+

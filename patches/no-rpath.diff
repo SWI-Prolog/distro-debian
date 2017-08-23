@@ -1,5 +1,5 @@
---- a/src/configure.in
-+++ b/src/configure.in
+--- a/src/configure.ac
++++ b/src/configure.ac
 @@ -578,7 +578,7 @@
  SO_PIC="-fPIC"
  SO_LD="$CC"
