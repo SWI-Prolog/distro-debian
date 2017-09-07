@@ -28,6 +28,7 @@ Build-Depends:
  libossp-uuid-dev,
  libdb-dev,
  libpcre3-dev,
+ libjs-jquery,
  dh-autoreconf
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
