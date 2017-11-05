@@ -1,7 +1,7 @@
 --- a/src/pl-thread.c
 +++ b/src/pl-thread.c
-@@ -2022,7 +2022,7 @@ pl_thread_create(term_t goal, term_t id, term_t options)
-     rc = set_affinity(affinity, &attr);
+@@ -1475,7 +1475,7 @@
+   }
    if ( rc == 0 )
    {
 -#ifdef USE_COPY_STACK_SIZE
