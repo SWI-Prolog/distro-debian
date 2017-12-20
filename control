@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Jan Wielemaker <jan@swi-prolog.org>
 Build-Depends:
  debhelper,
- libncursesw5-dev,
+ ncurses-dev,
  libreadline-dev,
  libedit-dev,
  libgmp-dev,
@@ -24,7 +24,7 @@ Build-Depends:
  libarchive-dev,
  libssl-dev,
  zlib1g-dev,
- libunwind8-dev | libunwind7-dev [ia64 i386 amd64 ppc64 powerpc armel armhf],
+ libunwind-dev | libunwind8-dev | libunwind7-dev,
  libossp-uuid-dev,
  libdb-dev,
  libpcre3-dev,
