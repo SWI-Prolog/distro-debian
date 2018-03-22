@@ -28,6 +28,7 @@ Build-Depends:
  libossp-uuid-dev,
  libdb-dev,
  libpcre3-dev,
+ libyaml-dev,
  libjs-jquery,
  dh-autoreconf
 Standards-Version: 3.9.4
