@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+# removes noautodbgsym from DEB_BUILD_OPTIONS
+DEB_BUILD_OPTIONS = parallel=4
 DEB_BUILD_ARCH := $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 DEB_BUILD_MULTIARCH := $(shell dpkg-architecture -qDEB_BUILD_MULTIARCH)
 
