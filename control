@@ -3,6 +3,7 @@ Section: interpreters
 Priority: optional
 Maintainer: Jan Wielemaker <jan@swi-prolog.org>
 Build-Depends:
+ cmake,
  debhelper,
  ncurses-dev,
  libreadline-dev,
