@@ -32,7 +32,7 @@ endif
 PLBASE := /usr/lib/swi-prolog/
 JNIDIR := /usr/lib/$(DEB_BUILD_MULTIARCH)/jni
 
-NOX_COMPONENTS =
+NOX_COMPONENTS = \
 	Core_system \
 	Core_packages \
 	Archive_interface \
@@ -42,11 +42,11 @@ NOX_COMPONENTS =
 	OpenSSL_interface \
 	Documentation \
 	Examples
-X_COMPONENTS =
+X_COMPONENTS = \
 	Graphics_subsystem
-ODBC_COMPONENTS =
+ODBC_COMPONENTS = \
 	ODBC_interface
-BDB_COMPONENTS =
+BDB_COMPONENTS = \
 	BerkeleyDB_interface
 
 ifeq ($(shell dpkg-architecture -qDEB_BUILD_ARCH_OS),linux)
