@@ -6,9 +6,14 @@ DEB_BUILD_OPTIONS = parallel=$(JOBS)
 DEB_BUILD_ARCH := $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 DEB_BUILD_MULTIARCH := $(shell dpkg-architecture -qDEB_BUILD_MULTIARCH)
 
+PLBASENAME := swi-prolog
+PLBASE     := /usr/lib/$(PLBASENAME)/
+JNIDIR     := /usr/lib/$(DEB_BUILD_MULTIARCH)/jni
+
 CMAKE_OPTIONS = \
 	-DSWIPL_PACKAGES_QT=OFF \
 	-DCMAKE_INSTALL_PREFIX=/usr \
+	-DSWIPL_INSTALL_DIR=$(PLBASENAME) \
 	-DCMAKE_BUILD_TYPE=DEB
 
 # List of architectures where -java package should be built.
@@ -19,9 +24,6 @@ ifeq ($(filter $(DEB_BUILD_ARCH),$(JAVA_ARCHS)),)
 else
     JAVA_COMPONENTS = Java_interface
 endif
-
-PLBASE := /usr/lib/swi-prolog/
-JNIDIR := /usr/lib/$(DEB_BUILD_MULTIARCH)/jni
 
 NOX_COMPONENTS = \
 	Core_system \
