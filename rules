@@ -14,6 +14,7 @@ CMAKE_OPTIONS = \
 	-DSWIPL_PACKAGES_QT=OFF \
 	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DSWIPL_INSTALL_DIR=$(PLBASENAME) \
+	-DJAVA_COMPATIBILITY=ON \
 	-DCMAKE_BUILD_TYPE=DEB
 
 # List of architectures where -java package should be built.
