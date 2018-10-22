@@ -57,7 +57,8 @@ endif
 
 # install_component component deb_pkg
 define install_component
-	DESTDIR=$(CURDIR)/debian/$(2) \
+	echo "Installing $component for $pkg from " $(CURDIR)
+	env DESTDIR=$(CURDIR)/debian/$(2) -C build \
 	cmake -DCMAKE_INSTALL_COMPONENT=$(1) \
 	      -P cmake_install.cmake
 endef
@@ -116,7 +117,7 @@ USE_PUBLIC_NETWORK_TESTS=false
 export USE_PUBLIC_NETWORK_TESTS
 
 override_dh_auto_test:
-	-cd build && ctest -V -j 4
+	-cd build && ctest -V -j $(JOBS)
 
 .PHONY: override_dh_auto_configure override_dh_auto_build override_dh_auto_clean override_dh_auto_install
 .PHONY: override_dh_install override_dh_builddeb override_dh_auto_test
