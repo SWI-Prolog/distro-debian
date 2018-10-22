@@ -51,6 +51,7 @@ define install_component
 	env -C build DESTDIR=$(CURDIR)/debian/$(2) \
 	cmake -DCMAKE_INSTALL_COMPONENT=$(1) \
 	      -P cmake_install.cmake
+
 endef
 
 # install_components plog_pkg_list deb_pkg
