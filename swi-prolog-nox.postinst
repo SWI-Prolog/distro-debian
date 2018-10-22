@@ -10,6 +10,6 @@ fi
 
 # Update library index
 rm -f /usr/lib/swi-prolog/library/INDEX.pl
-/usr/bin/swipl -q -g "make_library_index('/usr/lib/swi-prolog/library/')" -t halt
+/usr/bin/swipl -f none -q -g "make_library_index('/usr/lib/swi-prolog/library/')" -t halt
 
 #DEBHELPER#
