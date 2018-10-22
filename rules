@@ -6,19 +6,10 @@ DEB_BUILD_OPTIONS = parallel=$(JOBS)
 DEB_BUILD_ARCH := $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 DEB_BUILD_MULTIARCH := $(shell dpkg-architecture -qDEB_BUILD_MULTIARCH)
 
-CMAKE_OPTIONS = -DSWIPL_PACKAGES_QT=OFF -DCMAKE_BUILD_TYPE=Release
-
-# FIXME: How to pass these down?
-CFLAGS   := $(shell dpkg-buildflags --get CFLAGS)
-CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS) -fPIC $(shell pkg-config --cflags ncursesw)
-LDFLAGS  := $(shell dpkg-buildflags --get LDFLAGS) $(shell dpkg-buildflags --get CFLAGS)
-
-# FIXME implement a proper fix
-ifeq ($(shell dpkg-architecture -qDEB_BUILD_ARCH_OS),hurd)
-CPPFLAGS += -DMAXPATHLEN=1024
-endif
-
-export CFLAGS CPPFLAGS LDFLAGS
+CMAKE_OPTIONS = \
+	-DSWIPL_PACKAGES_QT=OFF \
+	-DCMAKE_INSTALL_PREFIX=/usr \
+	-DCMAKE_BUILD_TYPE=DEB
 
 # List of architectures where -java package should be built.
 JAVA_ARCHS = $(shell grep-dctrl -PX swi-prolog-java -nsArchitecture debian/control)
@@ -57,7 +48,6 @@ endif
 
 # install_component component deb_pkg
 define install_component
-	echo "Installing $component for $pkg from " $(CURDIR)
 	env -C build DESTDIR=$(CURDIR)/debian/$(2) \
 	cmake -DCMAKE_INSTALL_COMPONENT=$(1) \
 	      -P cmake_install.cmake
@@ -65,7 +55,6 @@ endef
 
 # install_components plog_pkg_list deb_pkg
 define install_components
-	echo "Component " $(1)
 	$(foreach component,$(1),$(call install_component,$(component),$(2)))
 endef
 
@@ -73,7 +62,7 @@ endef
 	dh $@ --with=autoreconf --parallel
 
 override_dh_auto_configure:
-	mkdir build && cd build && cmake ..
+	mkdir build && cd build && cmake $(CMAKE_OPTIONS) ..
 
 override_dh_auto_build:
 	cd build && $(MAKE) -j $(JOBS) < /dev/null
@@ -82,10 +71,7 @@ override_dh_auto_clean:
 	rm -rf build
 
 override_dh_auto_install:
-	echo "Starting installation"
-	echo "nox: " $(NOX_COMPONENTS)
 	$(call install_components,$(NOX_COMPONENTS),swi-prolog-nox)
-	echo "x: " $(X_COMPONENTS)
 	$(call install_components,$(X_COMPONENTS),swi-prolog-x)
 	$(call install_components,$(JAVA_COMPONENTS),swi-prolog-java)
 	$(call install_components,$(ODBC_COMPONENTS),swi-prolog-odbc)
