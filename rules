@@ -58,14 +58,15 @@ endif
 # install_component component deb_pkg
 define install_component
 	echo "Installing $component for $pkg from " $(CURDIR)
-	env DESTDIR=$(CURDIR)/debian/$(2) -C build \
+	env -C build DESTDIR=$(CURDIR)/debian/$(2) \
 	cmake -DCMAKE_INSTALL_COMPONENT=$(1) \
 	      -P cmake_install.cmake
 endef
 
 # install_components plog_pkg_list deb_pkg
 define install_components
-	$(foreach component,$(1),$(call install_package,$(component),$(2)))
+	echo "Component " $(1)
+	$(foreach component,$(1),$(call install_component,$(component),$(2)))
 endef
 
 %:
@@ -81,7 +82,10 @@ override_dh_auto_clean:
 	rm -rf build
 
 override_dh_auto_install:
+	echo "Starting installation"
+	echo "nox: " $(NOX_COMPONENTS)
 	$(call install_components,$(NOX_COMPONENTS),swi-prolog-nox)
+	echo "x: " $(X_COMPONENTS)
 	$(call install_components,$(X_COMPONENTS),swi-prolog-x)
 	$(call install_components,$(JAVA_COMPONENTS),swi-prolog-java)
 	$(call install_components,$(ODBC_COMPONENTS),swi-prolog-odbc)
