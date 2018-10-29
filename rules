@@ -50,8 +50,9 @@ else
 endif
 
 # install_component component deb_pkg
+# env -C build doesn't work on Ubuntu 16.04 or older
 define install_component
-	env -C build DESTDIR=$(CURDIR)/debian/$(2) \
+	cd build && env DESTDIR=$(CURDIR)/debian/$(2) \
 	cmake -DCMAKE_INSTALL_COMPONENT=$(1) \
 	      -P cmake_install.cmake
 
