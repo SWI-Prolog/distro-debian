@@ -64,7 +64,7 @@ define install_components
 endef
 
 %:
-	dh $@ --with=autoreconf --parallel
+	dh $@ --parallel
 
 override_dh_auto_configure:
 	mkdir build && cd build && cmake $(CMAKE_OPTIONS) ..
