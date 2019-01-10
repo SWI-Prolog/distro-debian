@@ -3,6 +3,7 @@ Section: interpreters
 Priority: optional
 Maintainer: Jan Wielemaker <jan@swi-prolog.org>
 Build-Depends:
+ cmake,
  debhelper,
  ncurses-dev,
  libreadline-dev,
@@ -28,6 +29,7 @@ Build-Depends:
  libossp-uuid-dev,
  libdb-dev,
  libpcre3-dev,
+ libyaml-dev,
  libjs-jquery,
  dh-autoreconf
 Standards-Version: 3.9.4
