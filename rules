@@ -15,7 +15,8 @@ CMAKE_OPTIONS = \
 	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DSWIPL_INSTALL_DIR=$(PLBASENAME) \
 	-DJAVA_COMPATIBILITY=ON \
-	-DCMAKE_BUILD_TYPE=DEB
+	-DCMAKE_BUILD_TYPE=DEB \
+	-DJNIDIR=$(JNIDIR)
 
 # List of architectures where -java package should be built.
 JAVA_ARCHS = $(shell grep-dctrl -PX swi-prolog-java -nsArchitecture debian/control)
@@ -89,11 +90,6 @@ override_dh_auto_install:
 	find debian/ -depth -type d -empty -exec rm -rfv {} \;
 
 	# mv $(CURDIR)/debian/swi-prolog-nox/$(PLBASE)/lib/$(DEB_BUILD_ARCH)/libswipl.* $(CURDIR)/debian/swi-prolog-nox/usr/lib/
-
-	# Link libjpl.so from the JNI directory so java can load it without LD_LIBRARY_PATH
-	mkdir -p $(CURDIR)/debian/swi-prolog-java/$(JNIDIR)
-	ln -s $(PLBASE)/lib/$(DEB_BUILD_ARCH)/libjpl.so \
-	      $(CURDIR)/debian/swi-prolog-java/$(JNIDIR)/
 
 override_dh_install:
 
