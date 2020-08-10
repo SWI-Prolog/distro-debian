@@ -40,7 +40,7 @@ Homepage: http://www.swi-prolog.org
 Package: swi-prolog
 Architecture: any
 Depends: ${misc:Depends}, swi-prolog-nox (= ${binary:Version}), swi-prolog-x (= ${binary:Version})
-Suggests: swi-prolog-doc, prolog-el
+Suggests: prolog-el
 Description: ISO/Edinburgh-style Prolog interpreter
  SWI-Prolog is a fast and powerful ISO/Edinburgh-style Prolog compiler with a
  rich set of built-in predicates. It offers a fast, robust and small
@@ -60,7 +60,7 @@ Package: swi-prolog-nox
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libgmp-dev, libedit-dev, libreadline-dev, libncursesw5-dev, libjs-jquery
 Breaks: swi-prolog (<< 5.8.2-1)
-Suggests: swi-prolog-doc, prolog-el
+Suggests: prolog-el
 Description: ISO/Edinburgh-style Prolog interpreter (without X support)
  SWI-Prolog is a fast and powerful ISO/Edinburgh-style Prolog compiler with a
  rich set of built-in predicates. It offers a fast, robust and small
