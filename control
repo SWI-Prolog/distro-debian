@@ -28,7 +28,7 @@ Build-Depends:
  libunwind-dev | libunwind8-dev | libunwind7-dev,
  libossp-uuid-dev,
  libdb-dev,
- libpcre3-dev,
+ libpcre2-dev,
  libyaml-dev,
  libjs-jquery,
  dh-autoreconf
