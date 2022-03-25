@@ -1,3 +1,9 @@
+swi-prolog (8.5.9-1-g6d4a7c45a-bionicppa2) bionic; urgency=medium
+
+  * New upstream release (from GIT)
+
+ -- Jan Wielemaker <ppa@swi-prolog.org>  Fri, 25 Mar 2022 14:31:22 +0100
+
 swi-prolog (8.5.9-0-focalppa2) focal; urgency=medium
 
   * New upstream release (from GIT)
