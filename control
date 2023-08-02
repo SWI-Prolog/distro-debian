@@ -31,6 +31,7 @@ Build-Depends:
  libpcre2-dev,
  libyaml-dev,
  libjs-jquery,
+ libpython3-dev,
  dh-autoreconf
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
