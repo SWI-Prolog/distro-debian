@@ -35,6 +35,7 @@ NOX_COMPONENTS = \
 	Perl_regex \
 	YAML_support \
 	OpenSSL_interface \
+	Python_interface \
 	Documentation \
 	Examples
 X_COMPONENTS = \
