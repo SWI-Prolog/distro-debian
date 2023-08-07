@@ -31,6 +31,7 @@ Build-Depends:
  libpcre2-dev,
  libyaml-dev,
  libjs-jquery,
+ python3,
  libpython3-dev,
  dh-autoreconf
 Standards-Version: 3.9.4
