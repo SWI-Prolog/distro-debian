@@ -16,7 +16,7 @@ Build-Depends:
  x11proto-core-dev,
  unixodbc-dev,
  default-jdk [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
- junit [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
+ junit4 [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
  libxft-dev,
  libxext-dev,
  libice-dev,
