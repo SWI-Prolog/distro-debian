@@ -20,6 +20,7 @@ Build-Depends:
  libxft-dev,
  libxext-dev,
  libice-dev,
+ libxrandr-dev,
  libxinerama-dev,
  dctrl-tools,
  libarchive-dev,
