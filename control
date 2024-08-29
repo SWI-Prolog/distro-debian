@@ -38,7 +38,7 @@ Build-Depends:
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/swi-prolog.git
-Homepage: http://www.swi-prolog.org
+Homepage: https://www.swi-prolog.org
 
 Package: swi-prolog
 Architecture: any
