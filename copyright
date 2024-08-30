@@ -1,11 +1,13 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: SWI-Prolog
-Upstream-Contact: Jan Wielemaker <J.Wielemaker@vu.nl>
-Source: http://www.swi-prolog.org/
+Upstream-Contact: Jan Wielemaker <jan@swi-prolog.org>
+Source: https://www.swi-prolog.org/
 
 Files: *
 Copyright: (C) 1985-2017 University of Amsterdam
-           (C) 1985-2017 Vu University Amsterdam
+           (C) 2008-2020 VU University Amsterdam
+           (C) 2014-2020 CWI Amsterdam
+           (C) 2020-2024 SWI-Prolog Solutions b.v.
 License: BSD-2-clause
 
 Files: packages/clib/bsd-crypt.c
