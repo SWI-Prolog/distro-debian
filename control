@@ -34,7 +34,7 @@ Build-Depends:
  libjs-jquery,
  python3,
  libpython3-dev,
- qt6-base-dev,
+ qt6-base-dev | qtbase5-dev,
  dh-autoreconf
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
