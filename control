@@ -6,35 +6,26 @@ Build-Depends:
  cmake,
  debhelper,
  ncurses-dev,
- libreadline-dev,
  libedit-dev,
  libgmp-dev,
- libjpeg8-dev,
- libx11-dev,
- libxpm-dev,
- libxt-dev,
- x11proto-core-dev,
  unixodbc-dev,
  default-jdk [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
  junit4 [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
- libxft-dev,
- libxext-dev,
- libice-dev,
- libxrandr-dev,
- libxinerama-dev,
  dctrl-tools,
  libarchive-dev,
  libssl-dev,
  zlib1g-dev,
- libunwind-dev | libunwind8-dev | libunwind7-dev,
  libossp-uuid-dev,
  libdb-dev,
  libpcre2-dev,
  libyaml-dev,
  libjs-jquery,
+ libsdl3-dev,
+ libsdl3-image-dev,
+ libcairo2-dev,
+ libpango1.0-dev,
  python3,
  libpython3-dev,
- qt6-base-dev | qtbase5-dev,
  dh-autoreconf
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
@@ -166,24 +157,3 @@ Description: Berkeley DB interface for SWI-Prolog
  .
  This package provides a foreign language extension to the Berkeley DB
  (libdb) embedded database.
-
-Package: swi-prolog-win
-Architecture: any
-Depends: ${shlibs:Depends}, swi-prolog-nox (= ${binary:Version}), ${misc:Depends}
-Description: Qt based console for SWI-Prolog
- SWI-Prolog is a fast and powerful ISO/Edinburgh-style Prolog compiler with a
- rich set of built-in predicates. It offers a fast, robust and small
- environment which enables substantial applications to be developed with it.
- .
- SWI-Prolog additionally offers:
- .
-  * A powerful module system
-  * Garbage collection
-  * Unicode character set handling
-  * Unbounted integer and rational number arithmetic
-  * Multithreading support
-  * A powerful C/C++ interface
-  * GNU Readline interface
- .
- This package provides a GUI console for SWI-Prolog based on Qt.  The console has menus
- for many of the common tasks to manage a SWI-Prolog project.
