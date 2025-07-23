@@ -4,7 +4,8 @@ Priority: optional
 Maintainer: Jan Wielemaker <jan@swi-prolog.org>
 Build-Depends:
  cmake,
- debhelper,
+ ninja-build,
+ debhelper-compat (= 13),
  ncurses-dev,
  libedit-dev,
  libgmp-dev,

@@ -17,7 +17,8 @@ CMAKE_OPTIONS = \
 	-DSWIPL_INSTALL_DIR=$(PLBASENAME) \
 	-DJAVA_COMPATIBILITY=ON \
 	-DCMAKE_BUILD_TYPE=DEB \
-	-DJNIDIR=$(JNIDIR)
+	-DJNIDIR=$(JNIDIR) \
+	-G Ninja
 
 # List of architectures where -java package should be built.
 JAVA_ARCHS = $(shell grep-dctrl -PX swi-prolog-java -nsArchitecture debian/control)
@@ -74,8 +75,14 @@ override_dh_auto_configure:
 	chmod 700 $(XDG_RUNTIME_DIR)
 	mkdir build && cd build && cmake $(CMAKE_OPTIONS) ..
 
+override_dh_autoreconf:
+	# no-op: not using autotools
+
+override_dh_update_autotools_config:
+	# no-op: not using autotools
+
 override_dh_auto_build:
-	cd build && $(MAKE) -j $(JOBS) < /dev/null
+	cd build && ninja < /dev/null
 
 override_dh_auto_clean:
 	rm -rf build
