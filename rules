@@ -14,6 +14,7 @@ CMAKE_OPTIONS = \
 	-DSWIPL_CC=cc -DSWIPL_CXX=c++ \
 	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DSWIPL_INSTALL_DIR=$(PLBASENAME) \
+	-DSWIPL_PACKAGES_GUI=OFF \
 	-DJAVA_COMPATIBILITY=ON \
 	-DCMAKE_BUILD_TYPE=DEB \
 	-DJNIDIR=$(JNIDIR) \
@@ -89,7 +90,6 @@ override_dh_auto_clean:
 
 override_dh_auto_install:
 	$(call install_components,$(NOX_COMPONENTS),swi-prolog-nox)
-	$(call install_components,$(X_COMPONENTS),swi-prolog-x)
 	$(call install_components,$(JAVA_COMPONENTS),swi-prolog-java)
 	$(call install_components,$(ODBC_COMPONENTS),swi-prolog-odbc)
 	$(call install_components,$(BDB_COMPONENTS),swi-prolog-bdb)
