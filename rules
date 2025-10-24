@@ -36,6 +36,7 @@ NOX_COMPONENTS = \
 	Commandline_editors \
 	Perl_regex \
 	YAML_support \
+	JSON_support \
 	OpenSSL_interface \
 	Python_interface \
 	Documentation \
