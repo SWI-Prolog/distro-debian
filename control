@@ -4,41 +4,34 @@ Priority: optional
 Maintainer: Jan Wielemaker <jan@swi-prolog.org>
 Build-Depends:
  cmake,
- debhelper,
+ ninja-build,
+ debhelper-compat (= 13),
  ncurses-dev,
- libreadline-dev,
  libedit-dev,
  libgmp-dev,
- libjpeg8-dev,
- libx11-dev,
- libxpm-dev,
- libxt-dev,
- x11proto-core-dev,
  unixodbc-dev,
  default-jdk [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
  junit4 [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
- libxft-dev,
- libxext-dev,
- libice-dev,
- libxrandr-dev,
- libxinerama-dev,
  dctrl-tools,
  libarchive-dev,
  libssl-dev,
  zlib1g-dev,
- libunwind-dev | libunwind8-dev | libunwind7-dev,
  libossp-uuid-dev,
  libdb-dev,
  libpcre2-dev,
  libyaml-dev,
  libjs-jquery,
+ libsdl3-dev,
+ libsdl3-image-dev,
+ libcairo2-dev,
+ libpango1.0-dev,
  python3,
  libpython3-dev,
  dh-autoreconf
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/swi-prolog.git
-Homepage: http://www.swi-prolog.org
+Homepage: https://www.swi-prolog.org
 
 Package: swi-prolog
 Architecture: any
