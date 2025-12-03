@@ -97,11 +97,6 @@ override_dh_auto_install:
 	# Remove empty directories
 	find debian/ -depth -type d -empty -exec rm -rfv {} \;
 
-<<<<<<< HEAD
-	# mv $(CURDIR)/debian/swi-prolog-nox/$(PLBASE)/lib/$(DEB_BUILD_ARCH)/libswipl.* $(CURDIR)/debian/swi-prolog-nox/usr/lib/
-
-=======
->>>>>>> origin/devel
 override_dh_install:
 
 override_dh_builddeb:
