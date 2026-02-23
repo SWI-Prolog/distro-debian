@@ -7,7 +7,6 @@ Build-Depends:
  ninja-build,
  debhelper-compat (= 13),
  ncurses-dev,
- libedit-dev,
  libgmp-dev,
  unixodbc-dev,
  default-jdk [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
