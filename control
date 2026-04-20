@@ -19,6 +19,7 @@ Build-Depends:
  libdb-dev,
  libpcre2-dev,
  libyaml-dev,
+ libutf8proc-dev,
  libjs-jquery,
  libsdl3-dev,
  libsdl3-image-dev,
