@@ -7,12 +7,11 @@ Build-Depends:
  pkg-config,
  ninja-build,
  debhelper-compat (= 13),
- ncurses-dev,
+ libncurses-dev,
  libgmp-dev,
  unixodbc-dev,
  libcrypt-dev,
  default-jdk [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
- junit4 [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
  dctrl-tools,
  libarchive-dev,
  libssl-dev,
@@ -27,9 +26,13 @@ Build-Depends:
  libsdl3-image-dev,
  libcairo2-dev,
  libpango1.0-dev,
+ libgraphviz-dev,
+ libgvplugin-neato-layout-dev,
+ libavformat-dev,
+ libavcodec-dev,
+ libavutil-dev,
  python3,
- libpython3-dev,
- dh-autoreconf
+ libpython3-dev
 Standards-Version: 3.9.4
 Vcs-Git: git://git.debian.org/git/collab-maint/swi-prolog.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/swi-prolog.git
@@ -56,7 +59,7 @@ Description: ISO/Edinburgh-style Prolog interpreter
 
 Package: swi-prolog-nox
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libgmp-dev, libedit-dev, libreadline-dev, libncursesw5-dev, libjs-jquery
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgmp-dev, libjs-jquery
 Breaks: swi-prolog (<< 5.8.2-1)
 Suggests: prolog-el
 Description: ISO/Edinburgh-style Prolog interpreter (without X support)
@@ -74,11 +77,13 @@ Description: ISO/Edinburgh-style Prolog interpreter (without X support)
   * A powerful C/C++ interface
   * GNU Readline interface
  .
- This package contains a working SWI-Prolog installation with GUI components.
+ This package contains a working SWI-Prolog installation without the GUI
+ components.
 
 Package: swi-prolog-x
 Architecture: any
 Depends: ${shlibs:Depends}, swi-prolog-nox (= ${binary:Version}), ${misc:Depends}
+Recommends: libgvplugin-neato-layout8
 Description: User interface library for SWI-Prolog (with X support)
  SWI-Prolog is a fast and powerful ISO/Edinburgh-style Prolog compiler with a
  rich set of built-in predicates. It offers a fast, robust and small

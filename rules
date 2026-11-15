@@ -105,7 +105,9 @@ override_dh_builddeb:
 # tell the tests NOT to try to access http://www.swi-prolog.org.  This
 # is used in some of the HTTP tests
 export USE_PUBLIC_NETWORK_TESTS=false
-export SDL_VIDEODRIVE=dummy
+# The documentation is built from UTF-8 sources
+export LC_ALL=C.UTF-8
+export SDL_VIDEODRIVER=dummy
 export XDG_RUNTIME_DIR=/tmp/xdg-runtime-$(shell id -u)
 
 
