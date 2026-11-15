@@ -11,7 +11,7 @@ Build-Depends:
  libgmp-dev,
  unixodbc-dev,
  libcrypt-dev,
- default-jdk [alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc],
+ default-jdk [amd64 arm64 armhf ppc64el riscv64 s390x],
  dctrl-tools,
  libarchive-dev,
  libssl-dev,
@@ -104,7 +104,7 @@ Description: User interface library for SWI-Prolog (with X support)
  gained popularity most with Prolog.
 
 Package: swi-prolog-java
-Architecture: alpha amd64 armel armhf i386 ia64 mips mipsel powerpc s390 s390x sparc
+Architecture: amd64 arm64 armhf ppc64el riscv64 s390x
 Depends: ${shlibs:Depends}, swi-prolog-nox (= ${binary:Version}), ${misc:Depends}, default-jre-headless | java2-runtime
 Description: Bidirectional interface between SWI-Prolog and Java
  SWI-Prolog is a fast and powerful ISO/Edinburgh-style Prolog compiler with a
