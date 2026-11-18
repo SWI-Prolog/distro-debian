@@ -1,3 +1,9 @@
+swi-prolog (11.0.0-3-gac192656e-stonkingppa2) stonking; urgency=medium
+
+  * New upstream release (from GIT)
+
+ -- Jan Wielemaker <ppa@swi-prolog.org>  Wed, 18 Nov 2026 11:35:18 +0000
+
 swi-prolog (11.0.0-2-g56ade6a1f-resoluteppa2) resolute; urgency=medium
 
   * New upstream release (from GIT)
